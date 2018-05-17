@@ -93,3 +93,16 @@ with open('alu_tweets.csv', 'w', newline = '') as output:
         print ('Subjectivity:', subjectivity)
         
  # check your CSV file for clean results!
+
+#BONUS
+#Get the mean of the polarities
+    print('Mean Polarity:', np.mean(polarity))
+#It's the Mean Polarity: 0.4666666666666666 - positive but closer to neutral.
+ 
+#Print a bar chart of the negative vs neutral vs the positive labels
+df = pd.read_csv('alu_tweets.csv')
+sns.set_style("whitegrid")
+sns.boxplot(x="Feeling_label", y="Polarity",
+                data=df)
+
+
