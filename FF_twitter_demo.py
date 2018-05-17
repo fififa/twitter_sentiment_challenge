@@ -6,16 +6,16 @@ from urlextract import URLExtract
 from textblob import TextBlob
 
 # log in via codes provided by Twitter
-consumer_key= 'l03BF4ld29RJQX8l7yy61DmSh'
-consumer_secret= 'cPlYKd0Ob9xSXnpNN7HjysCS6d5JJvg3T3UnZvOJg2fytwYyxb'
+consumer_key= 'consumer_key'
+consumer_secret= 'consumer_secret'
 
-access_token='623982915-5D0yMN9GcaiAJA24HFpLjGB7fi5SRQyqP4KhezI3'
-access_token_secret='xsl1nqy9EGbFqo0Lv6rN60ToLS5Jp59Tbu4j5qzPVRaZO'
+access_token='access_token'
+access_token_secret='access_token_secret'
 
 # this is for authentication by using OAuthHandler and set_access_token method
 # from tweepy with a bunch of codes hidden to us
-FF_auth = tweepy.OAuthHandler(l03BF4ld29RJQX8l7yy61DmSh, cPlYKd0Ob9xSXnpNN7HjysCS6d5JJvg3T3UnZvOJg2fytwYyxb)
-FF_auth.set_access_token(623982915-5D0yMN9GcaiAJA24HFpLjGB7fi5SRQyqP4KhezI3, xsl1nqy9EGbFqo0Lv6rN60ToLS5Jp59Tbu4j5qzPVRaZO)
+FF_auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+FF_auth.set_access_token(access_token, access_token_secret)
 
 # main variables where we'll do all the twitter magic
 api = tweepy.API(FF_auth)
@@ -49,9 +49,8 @@ def feeling(x):
     fileOut.writerows(data)  
 
     for tweet in public_tweets:
-        analysis = TextBlob(tweet.text) #sentiment analyzer model.
-        polarity = analysis.sentiment.polarity        
-        Feeling_label = feeling(polarity)
+        analysis = TextBlob(tweet.text) #sentiment analyzer model.            
+        Feeling_label = feeling(analysis.sentiment.polarity)
         subjectivity = analysis.sentiment.subjectivity
 
         # We want to extract any URLs contained in the tweets too. 
