@@ -1,5 +1,13 @@
-# twitter_sentiment_challenge
-Twitter Sentiment Analysis Challenge for Learn Python for Data Science #2 by @Sirajology on Youtube
+# twitter_sentiment_challenge | FF remake | Applying it to alueducation tweets
+See credit below to Siraj Raval and Cristalee.
+
+I analyzed just 100 tweets from alueducation, between May 1 - 17 2018.
+
+##My conclusions
+When I did this exercise with the ALU tweets, I learnt two things: 
+A - Fred Swaniker is the master twitter about ALU. Why is it that students and the rest of the community don't tweet much abnout what's happening there?
+B - I learnt that there's a very neutral sentiment attached to ALU. Perhaps there could be more human, happy, fun stories about the place, shared by the +500 students who live there!
+
 
 ##Overview
 
@@ -26,4 +34,5 @@ Instead of printing out each tweet, save each Tweet to a CSV file with an associ
 
 ##Credits
 
-This code is 100% Siraj baby.
+This code is 100% Siraj baby. and Cristalee whose code I got inspired by. 
+
