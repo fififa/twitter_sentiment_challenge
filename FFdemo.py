@@ -81,7 +81,9 @@ def feeling(x):
         # print to terminal
         print (tweet.text)
         print ('Polarity: ', polarity)
-        print ('Polarity: ', Feeling_label)
+        print ('Polarity_feeling: ', Feeling_label)
         print ('Subjectivity:', subjectivity)
         
  # check your CSV file for clean results!
+
+Credits to Calistatee whose csv writer I used for this twitter sentiment analysis challenge
