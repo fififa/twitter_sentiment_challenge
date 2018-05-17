@@ -45,11 +45,12 @@ def feeling(x):
     else:
         return 'neutral'
 
- #Populate the csv with rows containing those 4 pieces of lingo
+ #Populate the csv with rows containing those 5 pieces of lingo
     fileOut.writerows(data)  
 
     for tweet in public_tweets:
         analysis = TextBlob(tweet.text) #sentiment analyzer model.            
+        Polarity = analysis.sentiment.polarity
         Feeling_label = feeling(analysis.sentiment.polarity)
         subjectivity = analysis.sentiment.subjectivity
 
