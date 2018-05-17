@@ -1,3 +1,5 @@
+#Credits to Calistatee whose csv writer and URL extractor function I used for this twitter sentiment analysis challenge
+
 import tweepy
 import csv
 from urlextract import URLExtract
@@ -86,4 +88,4 @@ def feeling(x):
         
  # check your CSV file for clean results!
 
-Credits to Calistatee whose csv writer I used for this twitter sentiment analysis challenge
+
